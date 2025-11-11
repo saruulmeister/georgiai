@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -26,13 +26,21 @@ export default function Footer() {
                 tj@georgi.ai
               </a>
               <a
+                href="mailto:saruul@georgi.ai"
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                data-testid="link-footer-email"
+              >
+                <Mail className="w-4 h-4" />
+                saruul@georgi.ai
+              </a>
+              <a
                 href="https://georgi.ai/demo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-muted-foreground hover:text-primary transition-colors block"
                 data-testid="link-footer-demo"
               >
-                georgi.ai/demo
+                georgi.fund/demo
               </a>
             </div>
           </div>

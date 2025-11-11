@@ -1,18 +1,24 @@
-import { useState } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { useToast } from '@/hooks/use-toast';
-import { Mail, Send } from 'lucide-react';
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { useToast } from "@/hooks/use-toast";
+import { Mail, Send } from "lucide-react";
 
 export default function ContactSection() {
-  const [email, setEmail] = useState('');
-  const [firmName, setFirmName] = useState('');
-  const [aumRange, setAumRange] = useState('');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [firmName, setFirmName] = useState("");
+  const [aumRange, setAumRange] = useState("");
+  const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
@@ -21,19 +27,19 @@ export default function ContactSection() {
     setIsSubmitting(true);
 
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    console.log('Demo request:', { email, firmName, aumRange, message });
+    console.log("Demo request:", { email, firmName, aumRange, message });
 
     toast({
-      title: 'Demo request received!',
+      title: "Demo request received!",
       description: "We'll be in touch within 24 hours.",
     });
 
-    setEmail('');
-    setFirmName('');
-    setAumRange('');
-    setMessage('');
+    setEmail("");
+    setFirmName("");
+    setAumRange("");
+    setMessage("");
     setIsSubmitting(false);
   };
 
@@ -42,7 +48,7 @@ export default function ContactSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Ready to{' '}
+            Ready to{" "}
             <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
               Get Started?
             </span>
@@ -116,7 +122,9 @@ export default function ContactSection() {
                   disabled={isSubmitting}
                   data-testid="button-submit-demo"
                 >
-                  {isSubmitting ? 'Sending...' : (
+                  {isSubmitting ? (
+                    "Sending..."
+                  ) : (
                     <>
                       <Send className="w-4 h-4 mr-2" />
                       Book a Demo
@@ -132,7 +140,8 @@ export default function ContactSection() {
               <div>
                 <h3 className="text-xl font-bold mb-4">Get in Touch</h3>
                 <p className="text-muted-foreground mb-6">
-                  Have questions? Our team is here to help you transform your operations.
+                  Have questions? Our team is here to help you transform your
+                  operations.
                 </p>
               </div>
 
@@ -141,7 +150,10 @@ export default function ContactSection() {
                   <Mail className="w-5 h-5 text-primary mt-0.5" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <a href="mailto:tj@georgi.ai" className="text-sm text-primary hover:underline">
+                    <a
+                      href="mailto:tj@georgi.ai"
+                      className="text-sm text-primary hover:underline"
+                    >
                       tj@georgi.ai
                     </a>
                   </div>
@@ -158,7 +170,7 @@ export default function ContactSection() {
                       className="text-sm text-primary hover:underline"
                       data-testid="link-schedule-demo"
                     >
-                      georgi.ai/demo
+                      georgi.fund/demo
                     </a>
                   </div>
                 </div>
@@ -166,7 +178,8 @@ export default function ContactSection() {
 
               <div className="pt-6 border-t border-border">
                 <p className="text-sm text-muted-foreground">
-                  <strong className="text-foreground">Response time:</strong> Within 24 hours
+                  <strong className="text-foreground">Response time:</strong>{" "}
+                  Within 24 hours
                 </p>
               </div>
             </CardContent>

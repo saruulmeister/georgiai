@@ -1,36 +1,43 @@
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Sparkles, TrendingUp, Shield } from 'lucide-react';
-import heroImage from '@assets/generated_images/AI_dashboard_hero_image_7c774615.png';
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Sparkles, TrendingUp, Shield } from "lucide-react";
+import heroImage from "@assets/generated_images/AI_dashboard_hero_image_7c774615.png";
 
 export default function HeroSection() {
   const scrollToContact = () => {
-    const element = document.getElementById('contact');
+    const element = document.getElementById("contact");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section className="min-h-screen pt-32 pb-20 px-6" data-testid="section-hero">
+    <section
+      className="min-h-screen pt-32 pb-20 px-6"
+      data-testid="section-hero"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <Badge variant="secondary" className="w-fit" data-testid="badge-ai-native">
+            <Badge
+              variant="secondary"
+              className="w-fit"
+              data-testid="badge-ai-native"
+            >
               <Sparkles className="w-3 h-3 mr-1" />
               AI-Native Operating System
             </Badge>
 
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-              The Future of{' '}
               <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
-                VC/PE Operations
+                AI native ERP for private funds
               </span>
             </h1>
 
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Georgi is the AI-native operating system that unifies portfolio management, 
-              operations, compliance, and analytics for venture capital and private equity firms.
+              Replace fragmented spreadsheets and legacy tools with a unified,
+              intelligent platform that automates fund operations, ensure
+              compliance, and delivers real-time insights.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -42,24 +49,20 @@ export default function HeroSection() {
               >
                 Get Started
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="backdrop-blur-sm"
-                data-testid="button-watch-demo"
-              >
-                Watch Demo
-              </Button>
             </div>
 
             <div className="flex flex-wrap gap-8 pt-4">
               <div className="flex items-center gap-2">
                 <Shield className="w-5 h-5 text-primary" />
-                <span className="text-sm text-muted-foreground">SOC 2 Compliant</span>
+                <span className="text-sm text-muted-foreground">
+                  SOC 2 Compliant
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <TrendingUp className="w-5 h-5 text-primary" />
-                <span className="text-sm text-muted-foreground">$2B+ AUM Tracked</span>
+                <span className="text-sm text-muted-foreground">
+                  $2B+ AUM Tracked
+                </span>
               </div>
             </div>
           </div>

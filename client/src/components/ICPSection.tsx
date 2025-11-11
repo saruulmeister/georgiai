@@ -1,5 +1,5 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Users, Building2, Target } from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card";
+import { Users, Building2, Target } from "lucide-react";
 
 export default function ICPSection() {
   return (
@@ -7,7 +7,7 @@ export default function ICPSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Built for{' '}
+            Built for{" "}
             <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
               Investment Leaders
             </span>
@@ -17,45 +17,20 @@ export default function ICPSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-1 gap-1">
           <Card className="hover-elevate" data-testid="card-primary-buyers">
-            <CardContent className="p-8 space-y-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+            <CardContent className="p-8 space-y-4 text-center">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto">
                 <Building2 className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold">Primary Buyers</h3>
+              <h3 className="text-xl font-bold">
+                Emerging & Mid-Market VCs/PE Firms
+              </h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• VC/PE firms ($50M-$5B AUM)</li>
-                <li>• Growth equity funds</li>
-                <li>• Family offices</li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <Card className="hover-elevate" data-testid="card-secondary-buyers">
-            <CardContent className="p-8 space-y-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Users className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold">Secondary Buyers</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Accelerators & incubators</li>
-                <li>• Corporate venture arms</li>
-                <li>• Angel networks</li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <Card className="hover-elevate" data-testid="card-decision-makers">
-            <CardContent className="p-8 space-y-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Target className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold">Decision Makers</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Managing Partners</li>
-                <li>• COOs & CFOs</li>
-                <li>• Portfolio Operations teams</li>
+                <li>• 2-4 funds under managemen</li>
+                <li>• 15-50 portfolio companies</li>
+                <li>• Small ops team (1-3 people)</li>
+                <li>• Pain: Manual processes, compliance risk</li>
               </ul>
             </CardContent>
           </Card>

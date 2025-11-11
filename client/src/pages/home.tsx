@@ -1,15 +1,15 @@
-import Navigation from '@/components/Navigation';
-import HeroSection from '@/components/HeroSection';
-import ProblemSolutionSection from '@/components/ProblemSolutionSection';
-import ProductSection from '@/components/ProductSection';
-import FeaturesSection from '@/components/FeaturesSection';
-import SocialProofSection from '@/components/SocialProofSection';
-import ComparisonSection from '@/components/ComparisonSection';
-import ArchitectureSection from '@/components/ArchitectureSection';
-import ICPSection from '@/components/ICPSection';
-import TeamSection from '@/components/TeamSection';
-import ContactSection from '@/components/ContactSection';
-import Footer from '@/components/Footer';
+import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/HeroSection";
+import ProblemSolutionSection from "@/components/ProblemSolutionSection";
+import ProductSection from "@/components/ProductSection";
+import FeaturesSection from "@/components/FeaturesSection";
+// import SocialProofSection from "@/components/SocialProofSection";
+import ComparisonSection from "@/components/ComparisonSection";
+import ArchitectureSection from "@/components/ArchitectureSection";
+import ICPSection from "@/components/ICPSection";
+// import TeamSection from '@/components/TeamSection';
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -19,11 +19,11 @@ export default function Home() {
       <ProblemSolutionSection />
       <ProductSection />
       <FeaturesSection />
-      <SocialProofSection />
+      {/* <SocialProofSection /> */}
       <ComparisonSection />
       <ArchitectureSection />
       <ICPSection />
-      <TeamSection />
+      {/* <TeamSection /> */}
       <ContactSection />
       <Footer />
     </div>

@@ -1,25 +1,25 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Check, Circle, X } from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card";
+import { Check, Circle, X } from "lucide-react";
 
 export default function ComparisonSection() {
   const features = [
-    'AI-Native Platform',
-    'Unified Data Model',
-    'Real-time Analytics',
-    'Document Automation',
-    'Natural Language Interface',
-    'SOC 2 Compliance',
+    "AI-Native Platform",
+    "Unified Data Model",
+    "Real-time Analytics",
+    "Document Automation",
+    "Natural Language Interface",
+    "SOC 2 Compliance",
   ];
 
-  const competitors = ['Georgi', 'Carta', 'Aduro', 'Hanover Park', 'AngelList', 'Sydecar'];
+  const competitors = ["Georgi", "Carta", "Aduro", "AngelList", "Sydecar"];
 
   const comparison = [
-    [true, false, false, true, false, false],
-    [true, true, false, false, true, false],
-    [true, false, true, false, false, true],
-    [true, false, false, false, false, false],
-    [true, false, false, false, false, false],
-    [true, true, false, true, false, false],
+    [true, false, false, false, false],
+    [true, true, false, true, false],
+    [true, false, true, false, true],
+    [true, false, false, false, false],
+    [true, false, false, false, false],
+    [true, true, false, false, false],
   ];
 
   const getIcon = (value: boolean, isGeorgi: boolean) => {
@@ -37,7 +37,7 @@ export default function ComparisonSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Why Choose{' '}
+            Why Choose{" "}
             <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
               Georgi
             </span>
@@ -56,7 +56,7 @@ export default function ComparisonSection() {
                   {competitors.map((comp, index) => (
                     <th
                       key={index}
-                      className={`text-center p-4 font-semibold ${index === 0 ? 'text-primary' : ''}`}
+                      className={`text-center p-4 font-semibold ${index === 0 ? "text-primary" : ""}`}
                       data-testid={`competitor-${index}`}
                     >
                       {comp}
@@ -66,7 +66,11 @@ export default function ComparisonSection() {
               </thead>
               <tbody>
                 {features.map((feature, fIndex) => (
-                  <tr key={fIndex} className="border-b border-border last:border-0" data-testid={`feature-row-${fIndex}`}>
+                  <tr
+                    key={fIndex}
+                    className="border-b border-border last:border-0"
+                    data-testid={`feature-row-${fIndex}`}
+                  >
                     <td className="p-4 text-muted-foreground">{feature}</td>
                     {comparison[fIndex].map((hasFeature, cIndex) => (
                       <td key={cIndex} className="p-4 text-center">
