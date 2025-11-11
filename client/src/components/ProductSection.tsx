@@ -1,44 +1,48 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Database, CheckCircle2, BarChart3, ArrowRight } from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card";
+import { Database, CheckCircle2, BarChart3, ArrowRight } from "lucide-react";
 
 export default function ProductSection() {
   const products = [
     {
       icon: Database,
-      title: 'AI-Native ERP',
+      title: "AI-Native ERP",
       features: [
-        'Centralized portfolio data management',
-        'Automated document parsing and extraction',
-        'Real-time synchronization across systems',
+        "Centralized portfolio data management",
+        "Automated document parsing and extraction",
+        "Real-time synchronization across systems",
       ],
     },
     {
       icon: CheckCircle2,
-      title: 'Operations & Compliance',
+      title: "Operations & Compliance",
       features: [
-        'Automated regulatory reporting',
-        'Smart contract management',
-        'Audit trail and version control',
+        "Automated regulatory reporting",
+        "Smart contract management",
+        "Audit trail and version control",
       ],
     },
     {
       icon: BarChart3,
-      title: 'Analytics & Copilot',
+      title: "Analytics & Copilot",
       features: [
-        'AI-powered investment insights',
-        'Natural language queries',
-        'Customizable dashboards and reports',
+        "AI-powered investment insights",
+        "Natural language queries",
+        "Customizable dashboards and reports",
       ],
     },
   ];
 
   return (
-    <section id="product" className="py-20 px-6 bg-card/30" data-testid="section-product">
+    <section
+      id="product"
+      className="py-20 px-6 bg-card/30"
+      data-testid="section-product"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Complete Platform for{' '}
-            <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
+            Complete Platform for{" "}
+            <span className="bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent">
               Modern Firms
             </span>
           </h2>
@@ -51,7 +55,11 @@ export default function ProductSection() {
           {products.map((product, index) => {
             const Icon = product.icon;
             return (
-              <Card key={index} className="hover-elevate" data-testid={`card-product-${index}`}>
+              <Card
+                key={index}
+                className="hover-elevate"
+                data-testid={`card-product-${index}`}
+              >
                 <CardContent className="p-8 space-y-6">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                     <Icon className="w-6 h-6 text-primary" />
@@ -59,9 +67,15 @@ export default function ProductSection() {
                   <h3 className="text-2xl font-bold">{product.title}</h3>
                   <ul className="space-y-3">
                     {product.features.map((feature, fIndex) => (
-                      <li key={fIndex} className="flex items-start gap-2" data-testid={`feature-${index}-${fIndex}`}>
+                      <li
+                        key={fIndex}
+                        className="flex items-start gap-2"
+                        data-testid={`feature-${index}-${fIndex}`}
+                      >
                         <ArrowRight className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-muted-foreground text-sm">{feature}</span>
+                        <span className="text-muted-foreground text-sm">
+                          {feature}
+                        </span>
                       </li>
                     ))}
                   </ul>
