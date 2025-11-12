@@ -29,7 +29,7 @@ export default function HeroSection() {
             </Badge>
 
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-              <span className="bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-orange-500 to-amber-700 bg-clip-text text-transparent">
                 AI native ERP for private funds
               </span>
             </h1>
@@ -44,7 +44,7 @@ export default function HeroSection() {
               <Button
                 size="lg"
                 onClick={scrollToContact}
-                className="bg-gradient-to-r from-primary to-orange-500 hover:opacity-90 transition-opacity"
+                className="bg-gradient-to-r from-orange-500 to-amber-700 hover:opacity-90 transition-opacity"
                 data-testid="button-get-started"
               >
                 Get Started
