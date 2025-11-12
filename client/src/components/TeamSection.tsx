@@ -32,7 +32,7 @@ export default function TeamSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Meet the{" "}
-            <span className="bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-500 to-amber-700 bg-clip-text text-transparent">
               Team
             </span>
           </h2>
