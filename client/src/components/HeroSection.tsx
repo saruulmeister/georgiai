@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, TrendingUp, Shield } from "lucide-react";
-import heroImage from "@assets/generated_images/AI_dashboard_hero_image_7c774615.png";
 
 export default function HeroSection() {
   const scrollToContact = () => {
@@ -11,8 +10,8 @@ export default function HeroSection() {
 
   return (
     <section
-      // removed min-h-screen, reduced paddings
-      className="py-20 md:py-16 px-6"
+      // Added controlled top spacing
+      className="pt-28 md:pt-36 pb-20 px-6"
       data-testid="section-hero"
     >
       <div className="max-w-7xl mx-auto">
@@ -24,7 +23,7 @@ export default function HeroSection() {
             </Badge>
 
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="bg-gradient-to-r from-orange-500 to-orange-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-orange-500 to-amber-700 bg-clip-text text-transparent">
                 AI native ERP for VCs
               </span>
             </h1>
@@ -39,7 +38,7 @@ export default function HeroSection() {
               <Button
                 size="lg"
                 onClick={scrollToContact}
-                className="bg-gradient-to-r from-orange-500 to-orange-500 hover:opacity-90 transition-opacity"
+                className="bg-gradient-to-r from-orange-500 to-amber-700 hover:opacity-90 transition-opacity"
                 data-testid="button-get-started"
               >
                 Get Started
@@ -47,9 +46,9 @@ export default function HeroSection() {
             </div>
           </div>
 
+          {/* Dashboard mock */}
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-amber-600/20 blur-3xl rounded-full" />
-            {/* Right: Dashboard preview */}
             <div className="relative bg-[#0F172A] border border-white/10 rounded-2xl p-8 shadow-2xl">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -81,7 +80,7 @@ export default function HeroSection() {
                       </div>
                       <div className="h-2 bg-[#0F172A] rounded-full overflow-hidden">
                         <div
-                          className="h-full bg-gradient-to-r from-orange-500 to-orange-500 rounded-full"
+                          className="h-full bg-gradient-to-r from-orange-500 to-amber-700 rounded-full"
                           style={{ width: `${v}%` }}
                         />
                       </div>
