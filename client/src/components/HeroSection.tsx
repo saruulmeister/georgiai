@@ -69,12 +69,51 @@ export default function HeroSection() {
 
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-orange-500/20 blur-3xl rounded-full" />
-            <img
-              src={heroImage}
-              alt="Georgi AI Dashboard"
-              className="relative rounded-2xl shadow-2xl border border-border"
-              data-testid="img-hero-dashboard"
-            />
+                      {/* Right: Dashboard preview */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#5562FF] to-[#7C3AED] rounded-3xl blur-2xl opacity-20"></div>
+            <div className="relative bg-[#0F172A] border border-white/10 rounded-2xl p-8 shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+              {/* Mock Dashboard */}
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-[#94A3B8]">Portfolio Overview</div>
+                  <div className="flex gap-2">
+                    <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-[#0B1220] rounded-xl p-4 border border-white/5">
+                    <div className="text-2xl font-bold text-white">$2.4B</div>
+                    <div className="text-sm text-[#94A3B8]">AUM</div>
+                  </div>
+                  <div className="bg-[#0B1220] rounded-xl p-4 border border-white/5">
+                    <div className="text-2xl font-bold text-white">124</div>
+                    <div className="text-sm text-[#94A3B8]">Active Deals</div>
+                  </div>
+                </div>
+                
+                <div className="bg-[#0B1220] rounded-xl p-4 border border-white/5 space-y-3">
+                  {[85, 92, 78].map((value, idx) => (
+                    <div key={idx} className="space-y-1">
+                      <div className="flex justify-between text-xs text-[#94A3B8]">
+                        <span>Fund {idx + 1}</span>
+                        <span>{value}%</span>
+                      </div>
+                      <div className="h-2 bg-[#0F172A] rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-gradient-to-r from-[#5562FF] to-[#7C3AED] rounded-full"
+                          style={{ width: `${value}%` }}
+                        ></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </div>
