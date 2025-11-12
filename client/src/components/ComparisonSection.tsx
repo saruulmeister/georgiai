@@ -46,7 +46,7 @@ export default function ComparisonSection() {
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-bold mb-3">
             Why Choose{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-amber-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-500 to-orange-500 bg-clip-text text-transparent">
               Georgi
             </span>
           </h2>
@@ -111,7 +111,7 @@ export default function ComparisonSection() {
             <span>Best-in-Class</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="inline-block w-3.5 h-3.5 rounded-full bg-amber-500" />
+            <span className="inline-block w-3.5 h-3.5 rounded-full bg-orange-500" />
             <span>Partial</span>
           </div>
           <div className="flex items-center gap-2">
