@@ -42,7 +42,7 @@ export default function FeaturesSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Powerful{" "}
-            <span className="bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-500 to-amber-700 bg-clip-text text-transparent">
               Features
             </span>
           </h2>
@@ -61,7 +61,7 @@ export default function FeaturesSection() {
                 data-testid={`feature-${index}`}
               >
                 <div className="flex-1 space-y-4">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-orange-500 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-amber-700 flex items-center justify-center">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-3xl font-bold">{feature.title}</h3>
