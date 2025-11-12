@@ -10,28 +10,28 @@ export default function ArchitectureSection() {
       title: "AI-Native ERP Core",
       description:
         "Purpose-built for fund operations with intelligent automation.",
-      gradient: "from-orange-500 to-amber-600",
+      gradient: "from-orange-500 to-orange-500",
     },
     {
       icon: Database,
       title: "Vector DB + SQL",
       description:
         "Hybrid architecture for semantic search and structured data.",
-      gradient: "from-amber-600 to-orange-500",
+      gradient: "from-orange-500 to-orange-500",
     },
     {
       icon: FileText,
       title: "Document Intelligence",
       description:
         "Extract, parse, and understand fund documents automatically.",
-      gradient: "from-orange-500 to-amber-600",
+      gradient: "from-orange-500 to-orange-500",
     },
     {
       icon: Zap,
       title: "Real-Time Sync",
       description:
         "Live data pipelines with bank-grade security and encryption.",
-      gradient: "from-amber-600 to-orange-500",
+      gradient: "from-orange-500 to-orange-500",
     },
   ];
 
@@ -68,7 +68,7 @@ export default function ArchitectureSection() {
                   className="bg-white border border-border rounded-2xl p-6 hover:border-orange-300 transition-all hover:shadow-lg hover:-translate-y-2 group relative"
                 >
                   {/* Number badge */}
-                  <div className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-orange-500 to-amber-600 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                  <div className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
                     {idx + 1}
                   </div>
 
@@ -94,10 +94,12 @@ export default function ArchitectureSection() {
         <div className="mt-12 flex flex-wrap justify-center gap-3">
           {[
             "PostgreSQL",
-            "VectorDB",
-            "Claude",
-            "OpenAI GPT",
-            "LangChain"
+            "Pinecone",
+            "OpenAI GPT-4",
+            "LangChain",
+            "Python",
+            "React",
+            "TypeScript",
           ].map((tech, idx) => (
             <div
               key={idx}
