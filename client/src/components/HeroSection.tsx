@@ -25,14 +25,14 @@ export default function HeroSection() {
 
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-orange-500 to-orange-500 bg-clip-text text-transparent">
-                AI native ERP for private funds
+                AI native ERP for VCs
               </span>
             </h1>
 
             <p className="text-xl text-muted-foreground leading-relaxed">
               Replace fragmented spreadsheets and legacy tools with a unified,
-              intelligent platform that automates fund operations, ensure
-              compliance, and delivers real-time insights.
+              intelligent platform that automates fund administrations, portfolio monitoring,
+              and delivers real-time insights.
             </p>
 
             <div className="flex flex-wrap gap-4">
