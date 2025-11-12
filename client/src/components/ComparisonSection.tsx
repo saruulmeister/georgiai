@@ -41,7 +41,7 @@ export default function ComparisonSection() {
   };
 
   return (
-    <section className="py-16 px-6" data-testid="section-comparison">
+    <section id="comparison" className="py-16 px-6" data-testid="section-comparison">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-bold mb-3">
