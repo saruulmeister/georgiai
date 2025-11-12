@@ -12,7 +12,7 @@ export default function HeroSection() {
   return (
     <section
       // removed min-h-screen, reduced paddings
-      className="py-12 md:py-16 px-6"
+      className="py-20 md:py-16 px-6"
       data-testid="section-hero"
     >
       <div className="max-w-7xl mx-auto">
