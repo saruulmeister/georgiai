@@ -24,7 +24,7 @@ export default function SocialProofSection() {
           {stats.map((stat, index) => (
             <Card key={index} data-testid={`stat-card-${index}`}>
               <CardContent className="p-8 text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent mb-2">
+                <div className="text-4xl font-bold bg-gradient-to-r from-orange-500 to-amber-700 bg-clip-text text-transparent mb-2">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground">
