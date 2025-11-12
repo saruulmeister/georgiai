@@ -3,17 +3,17 @@ import { X, Check } from "lucide-react";
 
 export default function ProblemSolutionSection() {
   const problems = [
-    "Fragmented data across multiple tools",
+    "Inefficient portfolio tracking",
     "Manual portfolio tracking and reporting",
-    "Error-prone compliance processes",
-    "Disconnected communication channels",
+    "Error-prone reconciliation processes",
+    "Manual processes and Bottlenecks",
   ];
 
   const solutions = [
     "Unified single source of truth",
     "Automated real-time analytics",
-    "Secure AI-powered compliance",
-    "Integrated collaboration platform",
+    "Zero data entry, autonomous reconciliation",
+    "Deeply embedded AI workflows",
   ];
 
   return (
