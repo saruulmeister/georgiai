@@ -29,7 +29,7 @@ export default function Navigation() {
       data-testid="navigation"
     >
       <div className="max-w-7xl mx-auto px-6 h-18 flex items-center justify-between">
-        <div className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-amber-700 bg-clip-text text-transparent">
+        <div className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-orange-500 bg-clip-text text-transparent">
           Georgi AI
         </div>
 
@@ -80,7 +80,7 @@ export default function Navigation() {
 
         <Button
           onClick={() => scrollToSection("contact")}
-          className="bg-gradient-to-r from-orange-500 to-amber-700 hover:opacity-90 transition-opacity"
+          className="bg-gradient-to-r from-orange-500 to-orange-500 hover:opacity-90 transition-opacity"
           data-testid="button-book-demo"
         >
           Book a Demo
