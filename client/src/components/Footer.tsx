@@ -1,12 +1,14 @@
-import { Mail, Linkedin, Twitter } from "lucide-react";
+import { Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="border-t border-border py-12 px-6" data-testid="footer">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        {/* 2 columns on md+, single column on mobile */}
+        <div className="grid md:grid-cols-2 gap-8 items-start mb-8">
+          {/* Brand / tagline */}
           <div>
-            <div className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-amber-700 bg-clip-text text-transparent mb-4">
+            <div className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-amber-700 bg-clip-text text-transparent mb-3">
               Georgi
             </div>
             <p className="text-sm text-muted-foreground">
@@ -14,43 +16,14 @@ export default function Footer() {
             </p>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
-            <div className="space-y-2">
-              <a
-                href="mailto:tj@georgi.ai"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                data-testid="link-footer-email"
-              >
-                <Mail className="w-4 h-4" />
-                tj@georgi.ai
-              </a>
-              <a
-                href="mailto:saruul@georgi.ai"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                data-testid="link-footer-email"
-              >
-                <Mail className="w-4 h-4" />
-                saruul@georgi.ai
-              </a>
-              <a
-                href="https://georgi.ai/demo"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-muted-foreground hover:text-primary transition-colors block"
-                data-testid="link-footer-demo"
-              >
-                georgi.fund/demo
-              </a>
-            </div>
-          </div>
-
-          <div>
+          {/* Socials */}
+          <div className="md:justify-self-end">
             <h4 className="font-semibold mb-4">Follow Us</h4>
             <div className="flex gap-4">
               <a
                 href="#"
                 className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="LinkedIn"
                 data-testid="link-footer-linkedin"
               >
                 <Linkedin className="w-5 h-5" />
@@ -58,6 +31,7 @@ export default function Footer() {
               <a
                 href="#"
                 className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Twitter/X"
                 data-testid="link-footer-twitter"
               >
                 <Twitter className="w-5 h-5" />
