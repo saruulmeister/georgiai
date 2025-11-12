@@ -49,7 +49,7 @@ export default function ContactSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Ready to{" "}
-            <span className="bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-500 to-amber-700 bg-clip-text text-transparent">
               Get Started?
             </span>
           </h2>
@@ -118,7 +118,7 @@ export default function ContactSection() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-gradient-to-r from-primary to-orange-500 hover:opacity-90 transition-opacity"
+                  className="w-full bg-gradient-to-r from-orange-500 to-amber-700 hover:opacity-90 transition-opacity"
                   disabled={isSubmitting}
                   data-testid="button-submit-demo"
                 >
