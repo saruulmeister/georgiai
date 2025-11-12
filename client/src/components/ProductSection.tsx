@@ -57,14 +57,19 @@ export default function ProductSection() {
             return (
               <Card
                 key={index}
-                className="hover-elevate"
+                className="hover:shadow-lg transition-all hover:-translate-y-1 border border-border"
                 data-testid={`card-product-${index}`}
               >
                 <CardContent className="p-8 space-y-6">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-primary" />
+                  {/* Orange icon container */}
+                  <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-orange-600" />
                   </div>
-                  <h3 className="text-2xl font-bold">{product.title}</h3>
+
+                  <h3 className="text-2xl font-bold text-foreground">
+                    {product.title}
+                  </h3>
+
                   <ul className="space-y-3">
                     {product.features.map((feature, fIndex) => (
                       <li
@@ -72,15 +77,16 @@ export default function ProductSection() {
                         className="flex items-start gap-2"
                         data-testid={`feature-${index}-${fIndex}`}
                       >
-                        <ArrowRight className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                        <ArrowRight className="w-4 h-4 text-orange-600 mt-1 flex-shrink-0" />
                         <span className="text-muted-foreground text-sm">
                           {feature}
                         </span>
                       </li>
                     ))}
                   </ul>
+
                   <button
-                    className="text-primary text-sm font-medium hover:underline inline-flex items-center gap-1"
+                    className="text-orange-600 text-sm font-medium hover:underline inline-flex items-center gap-1"
                     data-testid={`link-learn-more-${index}`}
                   >
                     Learn more <ArrowRight className="w-4 h-4" />
