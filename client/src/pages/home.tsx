@@ -6,7 +6,7 @@ import ProductSection from "@/components/ProductSection";
 // import SocialProofSection from "@/components/SocialProofSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import ArchitectureSection from "@/components/ArchitectureSection";
-import ICPSection from "@/components/ICPSection";
+// import ICPSection from "@/components/ICPSection";
 // import TeamSection from '@/components/TeamSection';
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -22,7 +22,7 @@ export default function Home() {
       {/* <SocialProofSection /> */}
       <ComparisonSection />
       <ArchitectureSection />
-      <ICPSection />
+      {/* <ICPSection /> */}
       {/* <TeamSection /> */}
       <ContactSection />
       <Footer />
