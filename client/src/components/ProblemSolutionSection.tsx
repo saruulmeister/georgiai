@@ -17,7 +17,7 @@ export default function ProblemSolutionSection() {
   ];
 
   return (
-    <section id="problem" className="py-20 px-6" data-testid="section-problem">
+    <section id="problem" className="py-12 px-6" data-testid="section-problem">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
