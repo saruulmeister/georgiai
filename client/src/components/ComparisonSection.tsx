@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Check, X } from "lucide-react";
 
 export default function ComparisonSection() {
-  // Rows (left-most labels)
+  // Feature labels
   const features = [
     "AI-native",
     "All-in-One",
@@ -13,56 +13,59 @@ export default function ComparisonSection() {
     "Integrated Workflows",
   ];
 
-  // Columns (top header)
+  // Competitors (no Hanover Park)
   const competitors = ["Georgi", "Carta", "Aduro", "AngelList", "Sydecar"];
 
-  // Matrix values (rows x columns): true = ✅, "partial" = 🟡, false = ❌
-  // Based on your screenshot
+  // Matrix: "best" = ✅, "partial" = 🟡, "none" = ❌
   const comparison = [
     // AI-native
-    [true,  false, false, false, false],
+    ["best", "none", "none", "none", "none"],
     // All-in-One
-    [true,  false, false, false, false],
+    ["best", "none", "none", "none", "none"],
     // ERP
-    [true,  true, false, "partial", false],
+    ["best", "best", "none", "partial", "none"],
     // Compliance
-    [true, false, false, false, false],
+    ["best", "none", "none", "none", "none"],
     // Analytics
-    [true,  "partial", "partial", false, false],
+    ["best", "partial", "partial", "none", "none"],
     // Valuation
-    [true, false, false, false, false],
+    ["best", "none", "none", "none", "none"],
     // Integrated Workflows
-    [true,  "partial", "partial", "partial", "partial"],
+    ["best", "partial", "partial", "partial", "partial"],
   ];
 
+  // icon helper
   const getIcon = (value) => {
-    if (value === true) {
-      return <Check className="w-5 h-5 text-green-500" aria-label="Yes" />;
+    switch (value) {
+      case "best":
+        return <Check className="w-5 h-5 text-green-500" aria-label="Best-in-class" />;
+      case "partial":
+        return <span className="inline-block w-3.5 h-3.5 rounded-full bg-amber-500" aria-label="Partial" />;
+      default:
+        return <X className="w-5 h-5 text-rose-500/80" aria-label="Not provided" />;
     }
-    if (value === "partial") {
-      return <span className="inline-block w-3.5 h-3.5 rounded-full bg-amber-500" aria-label="Partial" />;
-    }
-    return <X className="w-5 h-5 text-rose-500/80" aria-label="No" />;
   };
 
   return (
     <section className="py-16 px-6" data-testid="section-comparison">
       <div className="max-w-6xl mx-auto">
+        {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-bold mb-3">
             Why Choose{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-500 to-amber-700 bg-clip-text text-transparent">
               Georgi
             </span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Based on today’s market capabilities
+            Compared to other fund management platforms
           </p>
         </div>
 
-        <Card data-testid="card-comparison">
+        {/* Table */}
+        <Card>
           <CardContent className="p-0 overflow-x-auto">
-            <table className="w-full text-sm">
+            <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="border-b border-border bg-muted/30">
                   <th className="text-left p-4 font-semibold">Feature</th>
@@ -72,7 +75,6 @@ export default function ComparisonSection() {
                       className={`text-center p-4 font-semibold ${
                         i === 0 ? "text-orange-600" : ""
                       }`}
-                      data-testid={`competitor-${i}`}
                     >
                       {comp}
                     </th>
@@ -81,10 +83,18 @@ export default function ComparisonSection() {
               </thead>
               <tbody>
                 {features.map((feature, r) => (
-                  <tr key={feature} className="border-b border-border last:border-0">
+                  <tr
+                    key={feature}
+                    className="border-b border-border last:border-0"
+                  >
                     <td className="p-4 font-medium">{feature}</td>
                     {comparison[r].map((cell, c) => (
-                      <td key={`${r}-${c}`} className="p-4 text-center">
+                      <td
+                        key={`${r}-${c}`}
+                        className={`p-4 text-center ${
+                          c === 0 ? "bg-orange-50/40" : ""
+                        }`}
+                      >
                         {getIcon(cell)}
                       </td>
                     ))}
@@ -95,16 +105,19 @@ export default function ComparisonSection() {
           </CardContent>
         </Card>
 
-        {/* Legend (optional) */}
-        <div className="flex items-center gap-6 mt-4 text-sm text-muted-foreground">
+        {/* Legend */}
+        <div className="flex items-center gap-6 mt-4 text-sm text-muted-foreground justify-center">
           <div className="flex items-center gap-2">
-            <Check className="w-4 h-4 text-green-500" /> <span>Yes</span>
+            <Check className="w-4 h-4 text-green-500" />
+            <span>Best-in-Class</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="inline-block w-3.5 h-3.5 rounded-full bg-amber-500" /> <span>Partial</span>
+            <span className="inline-block w-3.5 h-3.5 rounded-full bg-amber-500" />
+            <span>Partial</span>
           </div>
           <div className="flex items-center gap-2">
-            <X className="w-4 h-4 text-rose-500/80" /> <span>No</span>
+            <X className="w-4 h-4 text-rose-500/80" />
+            <span>Not Provided</span>
           </div>
         </div>
       </div>
