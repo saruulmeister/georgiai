@@ -30,8 +30,8 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Replace fragmented spreadsheets and legacy tools with a unified,
-              intelligent platform that automates fund administrations, portfolio monitoring,
+              Replace fragmented workflows and legacy tools with a unified,
+              intelligent platform that automates fund administration, portfolio monitoring,
               and delivers real-time insights.
             </p>
 
