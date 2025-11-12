@@ -94,7 +94,7 @@ export default function ArchitectureSection() {
         <div className="mt-12 flex flex-wrap justify-center gap-3">
           {[
             "PostgreSQL",
-            "VectorDB"
+            "VectorDB",
             "Claude",
             "OpenAI GPT",
             "LangChain"
