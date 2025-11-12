@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 gap-8 items-start mb-8">
           {/* Brand / tagline */}
           <div>
-            <div className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-amber-700 bg-clip-text text-transparent mb-3">
+            <div className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent mb-3">
               Georgi
             </div>
             <p className="text-sm text-muted-foreground">
