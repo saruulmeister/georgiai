@@ -56,7 +56,7 @@ export default function Navigation() {
             Features
           </button> */}
           <button
-            onClick={() => scrollToSection("why-georgi")}
+            onClick={() => scrollToSection("section-comparison")}
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             data-testid="link-why-georgi"
           >
