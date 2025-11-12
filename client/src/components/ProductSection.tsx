@@ -7,9 +7,9 @@ export default function ProductSection() {
       icon: Database,
       title: "AI-Native ERP",
       features: [
-        "Centralized portfolio data management",
-        "Automated document parsing and extraction",
-        "Real-time synchronization across systems",
+        "Fully autonomous AI accountants with human oversight",
+        "Zero data entry, autonomous reconciliation",
+        "Intelligent workflow routing",
       ],
     },
     {
@@ -17,7 +17,7 @@ export default function ProductSection() {
       title: "Operations & Compliance",
       features: [
         "Automated regulatory reporting",
-        "Smart contract management",
+        "Automated document parsing and extraction",
         "Audit trail and version control",
       ],
     },
@@ -42,7 +42,7 @@ export default function ProductSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Complete Platform for{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-amber-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-500 to-orange-500 bg-clip-text text-transparent">
               Modern Firms
             </span>
           </h2>
