@@ -30,7 +30,7 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-6 h-18 flex items-center justify-between">
         <div className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-amber-700 bg-clip-text text-transparent">
-          Georgi
+          Georgi AI
         </div>
 
         <div className="hidden md:flex items-center gap-8">
