@@ -6,7 +6,7 @@ export default function ProblemSolutionSection() {
     "Fragmented vendor platforms with siloed data",
     "Inefficient portfolio tracking and reporting",
     "Error-prone reconciliation processes",
-    "Manual processes and Bottlenecks",
+    "Manual processes and bottlenecks",
   ];
 
   const solutions = [
@@ -22,7 +22,7 @@ export default function ProblemSolutionSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             From Chaos to{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-500 to-amber-700 bg-clip-text text-transparent">
               Clarity
             </span>
           </h2>
@@ -32,12 +32,10 @@ export default function ProblemSolutionSection() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <Card
-            className="border-2 border-destructive/20"
-            data-testid="card-problem"
-          >
+          {/* Problem Card */}
+          <Card className="border-2 border-red-200" data-testid="card-problem">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-6 text-destructive">
+              <h3 className="text-2xl font-bold mb-6 text-red-600">
                 The Problem
               </h3>
               <ul className="space-y-4">
@@ -47,7 +45,7 @@ export default function ProblemSolutionSection() {
                     className="flex items-start gap-3"
                     data-testid={`problem-item-${index}`}
                   >
-                    <X className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
+                    <X className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
                     <span className="text-muted-foreground">{problem}</span>
                   </li>
                 ))}
@@ -55,12 +53,10 @@ export default function ProblemSolutionSection() {
             </CardContent>
           </Card>
 
-          <Card
-            className="border-2 border-primary/20"
-            data-testid="card-solution"
-          >
+          {/* Solution Card */}
+          <Card className="border-2 border-green-200" data-testid="card-solution">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-6 text-primary">
+              <h3 className="text-2xl font-bold mb-6 text-green-600">
                 The Solution
               </h3>
               <ul className="space-y-4">
@@ -70,7 +66,7 @@ export default function ProblemSolutionSection() {
                     className="flex items-start gap-3"
                     data-testid={`solution-item-${index}`}
                   >
-                    <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                     <span className="text-foreground">{solution}</span>
                   </li>
                 ))}
