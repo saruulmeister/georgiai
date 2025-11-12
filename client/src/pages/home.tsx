@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ProblemSolutionSection from "@/components/ProblemSolutionSection";
 import ProductSection from "@/components/ProductSection";
-import FeaturesSection from "@/components/FeaturesSection";
+// import FeaturesSection from "@/components/FeaturesSection";
 // import SocialProofSection from "@/components/SocialProofSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import ArchitectureSection from "@/components/ArchitectureSection";
@@ -18,7 +18,7 @@ export default function Home() {
       <HeroSection />
       <ProblemSolutionSection />
       <ProductSection />
-      <FeaturesSection />
+      {/* <FeaturesSection /> */}
       {/* <SocialProofSection /> */}
       <ComparisonSection />
       <ArchitectureSection />
