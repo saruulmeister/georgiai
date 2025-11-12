@@ -2,7 +2,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Check, X } from "lucide-react";
 
 export default function ComparisonSection() {
-  // Feature labels
   const features = [
     "AI-native",
     "All-in-One",
@@ -13,43 +12,37 @@ export default function ComparisonSection() {
     "Integrated Workflows",
   ];
 
-  // Competitors (no Hanover Park)
   const competitors = ["Georgi", "Carta", "Aduro", "AngelList", "Sydecar"];
 
-  // Matrix: "best" = ✅, "partial" = 🟡, "none" = ❌
+  // "best" = ✅, "partial" = 🟡, "none" = ❌
   const comparison = [
-    // AI-native
-    ["best", "none", "none", "none", "none"],
-    // All-in-One
-    ["best", "none", "none", "none", "none"],
-    // ERP
-    ["best", "best", "none", "partial", "none"],
-    // Compliance
-    ["best", "none", "none", "none", "none"],
-    // Analytics
-    ["best", "partial", "partial", "none", "none"],
-    // Valuation
-    ["best", "none", "none", "none", "none"],
-    // Integrated Workflows
-    ["best", "partial", "partial", "partial", "partial"],
+    ["best", "none", "none", "none", "none"],           // AI-native
+    ["best", "none", "none", "none", "none"],           // All-in-One
+    ["best", "best", "none", "partial", "none"],        // ERP
+    ["best", "none", "none", "none", "none"],           // Compliance
+    ["best", "partial", "partial", "none", "none"],     // Analytics
+    ["best", "none", "none", "none", "none"],           // Valuation
+    ["best", "partial", "partial", "partial", "partial"]// Integrated Workflows
   ];
 
-  // icon helper
   const getIcon = (value) => {
-    switch (value) {
-      case "best":
-        return <Check className="w-5 h-5 text-green-500" aria-label="Best-in-class" />;
-      case "partial":
-        return <span className="inline-block w-3.5 h-3.5 rounded-full bg-amber-500" aria-label="Partial" />;
-      default:
-        return <X className="w-5 h-5 text-rose-500/80" aria-label="Not provided" />;
+    if (value === "best") {
+      return <Check className="w-5 h-5 text-green-500" aria-label="Best-in-Class" />;
     }
+    if (value === "partial") {
+      return (
+        <span
+          className="inline-block w-3.5 h-3.5 rounded-full bg-amber-500"
+          aria-label="Partial"
+        />
+      );
+    }
+    return <X className="w-5 h-5 text-rose-500/80" aria-label="Not Provided" />;
   };
 
   return (
     <section className="py-16 px-6" data-testid="section-comparison">
       <div className="max-w-6xl mx-auto">
-        {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-bold mb-3">
             Why Choose{" "}
@@ -58,44 +51,50 @@ export default function ComparisonSection() {
             </span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Compared to other fund management platforms
+            Based on today’s market capabilities
           </p>
         </div>
 
-        {/* Table */}
         <Card>
           <CardContent className="p-0 overflow-x-auto">
-            <table className="w-full text-sm border-collapse">
+            <table className="w-full table-fixed text-sm">
+              {/* Force consistent column widths (first = wider for labels) */}
+              <colgroup>
+                <col style={{ width: 260 }} />
+                {competitors.map((_, i) => (
+                  <col key={i} style={{ width: 140 }} />
+                ))}
+              </colgroup>
+
               <thead>
                 <tr className="border-b border-border bg-muted/30">
                   <th className="text-left p-4 font-semibold">Feature</th>
                   {competitors.map((comp, i) => (
                     <th
                       key={comp}
-                      className={`text-center p-4 font-semibold ${
-                        i === 0 ? "text-orange-600" : ""
+                      className={`p-4 font-semibold ${
+                        i === 0 ? "text-orange-600" : "text-center"
                       }`}
                     >
-                      {comp}
+                      <div className="flex justify-center">{comp}</div>
                     </th>
                   ))}
                 </tr>
               </thead>
+
               <tbody>
                 {features.map((feature, r) => (
-                  <tr
-                    key={feature}
-                    className="border-b border-border last:border-0"
-                  >
+                  <tr key={feature} className="border-b border-border last:border-0">
                     <td className="p-4 font-medium">{feature}</td>
                     {comparison[r].map((cell, c) => (
                       <td
                         key={`${r}-${c}`}
-                        className={`p-4 text-center ${
+                        className={`p-4 ${
                           c === 0 ? "bg-orange-50/40" : ""
                         }`}
                       >
-                        {getIcon(cell)}
+                        {/* Center the mark precisely */}
+                        <div className="flex justify-center">{getIcon(cell)}</div>
                       </td>
                     ))}
                   </tr>
