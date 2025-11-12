@@ -41,13 +41,13 @@ export default function Navigation() {
           >
             Product
           </button>
-          <button
+          {/* <button
             onClick={() => scrollToSection("problem")}
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             data-testid="link-problem"
           >
             Problem
-          </button>
+          </button> */}
           {/* <button
             onClick={() => scrollToSection("features")}
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
