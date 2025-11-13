@@ -1,96 +1,97 @@
-import { Button } from './ui/button';
-import { motion } from 'motion/react';
-import { ArrowRight, Sparkles, Zap } from 'lucide-react';
-import dashboardImage from 'figma:asset/16499e433172d48bb2157369fdc82f668eab34a5.png';
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Sparkles, TrendingUp, Shield } from "lucide-react";
 
-export function Hero() {
+export default function HeroSection() {
+  const scrollToContact = () => {
+    const el = document.getElementById("contact");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className="relative px-6 pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-orange-400/30 to-red-400/30 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-          className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-red-400/20 to-orange-400/20 rounded-full blur-3xl"
-        />
-      </div>
+    <section
+      // Added controlled top spacing
+      className="pt-28 md:pt-36 pb-20 px-6"
+      data-testid="section-hero"
+    >
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 items-center gap-8 md:gap-12">
+          <div className="space-y-6">
+            <Badge variant="secondary" className="w-fit" data-testid="badge-ai-native">
+              <Sparkles className="w-3 h-3 mr-1" />
+              AI-Native Operating System
+            </Badge>
 
-      <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-slate-900 mb-6 text-5xl md:text-6xl lg:text-7xl"
-          >
-            <span className="block">AI native fund admin</span>
-            <span className="block">and ERP for</span>
-            <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-              Venture Capital
-            </span>
-          </motion.h1>
+            <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+              <span className="bg-gradient-to-r from-orange-500 to-amber-700 bg-clip-text text-transparent">
+                AI native ERP for VCs
+              </span>
+            </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-slate-600 mb-10 max-w-3xl mx-auto text-lg"
-          >
-            Replace fragmented workflows and legacy tools with a unified, intelligent platform 
-            that automates fund administration, portfolio monitoring, and delivers real-time insights.
-          </motion.p>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Replace fragmented workflows and legacy tools with a unified,
+              intelligent platform that automates fund administration, portfolio monitoring,
+              and delivers real-time insights.
+            </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-wrap gap-4 justify-center mb-16"
-          >
-            <Button size="lg" className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white shadow-xl group">
-              Get Started
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-2 border-orange-500 text-orange-700 hover:bg-orange-50">
-              Watch Demo
-            </Button>
-          </motion.div>
-
-          {/* Dashboard Preview */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="relative max-w-5xl mx-auto"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl blur-2xl opacity-20" />
-            <div className="relative rounded-2xl overflow-hidden border-4 border-white shadow-2xl">
-              <img 
-                src={dashboardImage} 
-                alt="Georgi AI Dashboard" 
-                className="w-full h-auto"
-              />
+            <div className="flex flex-wrap gap-4">
+              <Button
+                size="lg"
+                onClick={scrollToContact}
+                className="bg-gradient-to-r from-orange-500 to-amber-700 hover:opacity-90 transition-opacity"
+                data-testid="button-get-started"
+              >
+                Get Started
+              </Button>
             </div>
-          </motion.div>
+          </div>
+
+          {/* Dashboard mock */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-amber-600/20 blur-3xl rounded-full" />
+            <div className="relative bg-[#0F172A] border border-white/10 rounded-2xl p-8 shadow-2xl">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-[#94A3B8]">Portfolio Overview</div>
+                  <div className="flex gap-2">
+                    <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-[#0B1220] rounded-xl p-4 border border-white/5">
+                    <div className="text-2xl font-bold text-white">$2.4B</div>
+                    <div className="text-sm text-[#94A3B8]">AUM</div>
+                  </div>
+                  <div className="bg-[#0B1220] rounded-xl p-4 border border-white/5">
+                    <div className="text-2xl font-bold text-white">124</div>
+                    <div className="text-sm text-[#94A3B8]">Active Deals</div>
+                  </div>
+                </div>
+
+                <div className="bg-[#0B1220] rounded-xl p-4 border border-white/5 space-y-3">
+                  {[85, 92, 78].map((v, i) => (
+                    <div key={i} className="space-y-1">
+                      <div className="flex justify-between text-xs text-[#94A3B8]">
+                        <span>Fund {i + 1}</span>
+                        <span>{v}%</span>
+                      </div>
+                      <div className="h-2 bg-[#0F172A] rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-gradient-to-r from-orange-500 to-amber-700 rounded-full"
+                          style={{ width: `${v}%` }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
