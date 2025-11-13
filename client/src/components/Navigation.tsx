@@ -13,7 +13,7 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Old-style logo with new gradient */}
+          {/* Brand - old format with new gradient */}
           <motion.div
             whileHover={{ scale: 1.02 }}
             className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent select-none cursor-pointer"
@@ -21,6 +21,7 @@ export default function Navigation() {
             Georgi AI
           </motion.div>
 
+          {/* Desktop nav links */}
           <div className="hidden md:flex items-center gap-8">
             <a
               href="#product"
@@ -41,6 +42,15 @@ export default function Navigation() {
             </a>
 
             <a
+              href="#architecture"
+              className="text-slate-600 hover:text-slate-900 transition-colors relative group"
+              data-testid="link-architecture"
+            >
+              Architecture
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300" />
+            </a>
+
+            <a
               href="#contact"
               className="text-slate-600 hover:text-slate-900 transition-colors relative group"
               data-testid="link-contact"
@@ -50,6 +60,7 @@ export default function Navigation() {
             </a>
           </div>
 
+          {/* CTA + mobile menu */}
           <div className="flex items-center gap-3">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
@@ -63,6 +74,7 @@ export default function Navigation() {
                 Get Started
               </Button>
             </motion.div>
+
             <Button variant="ghost" size="icon" className="md:hidden">
               <Menu className="w-5 h-5" />
             </Button>
