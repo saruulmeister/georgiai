@@ -2,7 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "motion/react";
 import { ArrowRight, Sparkles } from "lucide-react";
-import dashboardImage from "figma:asset/16499e433172d48bb2157369fdc82f668eab34a5.png";
+import dashboardImage from "attached_assets/generated_images/c5c55cb3-2024-421a-9bbb-3806e39f7203.png";
+
 
 export default function HeroSection() {
   const scrollToContact = () => {
