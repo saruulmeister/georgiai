@@ -82,11 +82,12 @@ export default function HeroSection() {
             delivers real-time insights.
           </motion.p>
 
+          {/* Get Started button (centered) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-wrap gap-4 justify-center mb-16"
+            className="flex justify-center mb-16"
           >
             <Button
               size="lg"
@@ -96,13 +97,6 @@ export default function HeroSection() {
             >
               Get Started
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-orange-500 text-orange-700 hover:bg-orange-50"
-            >
-              Watch Demo
             </Button>
           </motion.div>
 
