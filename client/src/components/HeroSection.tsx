@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import dashboardImage from "attached_assets/generated_images/c5c55cb3-2024-421a-9bbb-3806e39f7203.png";
 
