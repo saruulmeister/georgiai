@@ -1,50 +1,62 @@
-import { Card, CardContent } from "@/components/ui/card";
-import archDiagram from "@assets/generated_images/Architecture_diagram_9c35bc1c.png";
 import React from "react";
 import { Brain, Database, FileText, Zap } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import archDiagram from "@assets/generated_images/Architecture_diagram_9c35bc1c.png";
 
 export default function ArchitectureSection() {
   const layers = [
     {
+      number: "1",
       icon: Brain,
       title: "AI-Native ERP Core",
       description:
         "Purpose-built for fund operations with intelligent automation.",
-      gradient: "from-orange-500 to-orange-500",
     },
     {
+      number: "2",
       icon: Database,
       title: "Vector DB + SQL",
       description:
         "Hybrid architecture for semantic search and structured data.",
-      gradient: "from-orange-500 to-orange-500",
     },
     {
+      number: "3",
       icon: FileText,
       title: "Document Intelligence",
       description:
         "Extract, parse, and understand fund documents automatically.",
-      gradient: "from-orange-500 to-orange-500",
     },
     {
+      number: "4",
       icon: Zap,
       title: "Real-Time Sync",
       description:
         "Live data pipelines with bank-grade security and encryption.",
-      gradient: "from-orange-500 to-orange-500",
     },
+  ];
+
+  const technologies = [
+    "PostgreSQL",
+    "Vector DB",
+    "Pinecone",
+    "OpenAI GPT-4",
+    "Claude",
+    "LangChain",
+    "Python",
+    "React",
+    "TypeScript",
   ];
 
   return (
     <section
       id="architecture"
-      className="py-20 px-6 lg:px-8 bg-white text-foreground"
+      className="px-6 py-24 lg:px-8 bg-slate-50 text-foreground"
       data-testid="section-architecture"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
             Built on Modern Architecture
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -54,59 +66,44 @@ export default function ArchitectureSection() {
           </p>
         </div>
 
-        {/* Architecture layers */}
-        <div className="relative">
-          {/* Connection line (visible on desktop) */}
-          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-orange-400/20 to-transparent -translate-y-1/2 hidden lg:block"></div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-            {layers.map((layer, idx) => {
-              const Icon = layer.icon;
-              return (
-                <div
-                  key={idx}
-                  className="bg-white border border-border rounded-2xl p-6 hover:border-orange-300 transition-all hover:shadow-lg hover:-translate-y-2 group relative"
-                >
-                  {/* Number badge */}
-                  <div className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
-                    {idx + 1}
-                  </div>
-
-                  <div
-                    className={`w-12 h-12 bg-gradient-to-br ${layer.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
-                  >
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-
-                  <h3 className="text-lg font-bold text-foreground mb-2">
-                    {layer.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {layer.description}
-                  </p>
+        {/* Pillars */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {layers.map((layer, idx) => {
+            const Icon = layer.icon;
+            return (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-lg transition-all"
+              >
+                <div className="w-10 h-10 rounded-lg bg-orange-500 text-white flex items-center justify-center mb-4 font-semibold">
+                  {layer.number}
                 </div>
-              );
-            })}
-          </div>
+
+                <div className="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
+                  <Icon className="w-5 h-5 text-orange-600" />
+                </div>
+
+                <h3 className="text-lg font-bold text-foreground mb-2">
+                  {layer.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {layer.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
 
         {/* Tech stack badges */}
-        <div className="mt-12 flex flex-wrap justify-center gap-3">
-          {[
-            "PostgreSQL",
-            "Pinecone",
-            "OpenAI GPT-4",
-            "LangChain",
-            "Python",
-            "React",
-            "TypeScript",
-          ].map((tech, idx) => (
-            <div
+        <div className="flex flex-wrap gap-3 justify-center">
+          {technologies.map((tech, idx) => (
+            <Badge
               key={idx}
-              className="px-4 py-2 bg-muted border border-border rounded-lg text-sm text-muted-foreground hover:border-orange-400/40 hover:text-orange-600 transition-colors"
+              variant="secondary"
+              className="px-4 py-2 text-sm"
             >
               {tech}
-            </div>
+            </Badge>
           ))}
         </div>
       </div>
